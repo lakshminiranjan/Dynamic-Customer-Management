@@ -114,20 +114,26 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-8">
-      <div className="max-w-6xl mx-auto space-y-8">
-        <div className="flex justify-between items-center">
-          <h1 className="text-4xl font-bold text-gray-900">Customer Measurements</h1>
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-            <input
-              type="text"
-              placeholder="Search customers..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200"
-            />
-          </div>
+  <div className="max-w-6xl mx-auto space-y-8">
+    {/* Header Section */}
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative">
+      {/* Title */}
+      <h1 className="text-4xl font-bold text-gray-900">Nizy Fashions</h1>
+      
+      {/* Search Bar */}
+      <div className="w-full md:w-auto md:absolute md:left-1/2 md:-translate-x-1/2 md:top-4">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+          <input
+            type="text"
+            placeholder="Search customers..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200"
+          />
         </div>
+      </div>
+    </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
